@@ -1,0 +1,50 @@
+package ie.atu.week4;
+
+import java.util.Scanner;
+
+public class StudentApp {
+    public static void main(String[] args) {
+
+        Student student = new Student();
+        Student student2 = new Student("keith");
+        Student student3 = new Student("nancy", "nancy@gmail.com", "Science");
+
+        // two arrays to hold info for first two students
+        String[] details1 = getAllDetails();
+        String[] details2 = getSomeDetails();
+        // setting first student info
+        student.setName(details1[0]);
+        student.setEmail(details1[1]);
+        student.setCourse(details1[2]);
+        //second student info
+        student2.setEmail(details2[1]);
+        student2.setCourse(details2[2]);
+        //print students
+        System.out.println("\n" + student.getName() + " " + student.getEmail() + " " + student.getCourse());
+        System.out.println("\n" + student2.getName() + " " + student2.getEmail() + " " + student2.getCourse());
+        System.out.println("\n" + student3.getName() + " " + student3.getEmail() + " " + student3.getCourse());
+        System.out.println("\n\n");
+    }
+
+    public static String[] getAllDetails(){
+        Scanner sc = new Scanner(System.in);
+        String[] details = new String[3];
+        System.out.println("Enter the name of the student");
+        details[0] = sc.nextLine();
+        System.out.println("Enter the email of the student");
+        details[1] = sc.nextLine();
+        System.out.println("Enter the course of the student");
+        details[2] = sc.nextLine();
+        return details;
+    }
+
+    public static String[] getSomeDetails(){
+        Scanner sc = new Scanner(System.in);
+        String[] details = new String[3];
+        System.out.println("Enter the email of the student");
+        details[1] = sc.nextLine();
+        System.out.println("Enter the course of the student");
+        details[2] = sc.nextLine();
+        return details;
+    }
+}
