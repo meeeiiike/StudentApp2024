@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class StudentApp {
     public static void main(String[] args) {
 
+        // creating 3 students
         Student student = new Student();
         Student student2 = new Student("keith");
         Student student3 = new Student("nancy", "nancy@gmail.com", "Science");
@@ -12,14 +13,14 @@ public class StudentApp {
         // two arrays to hold info for first two students
         String[] details1 = getAllDetails();
         String[] details2 = getSomeDetails();
-        // setting first student info
+        // setting first student info using elements of array
         student.setName(details1[0]);
         student.setEmail(details1[1]);
         student.setCourse(details1[2]);
-        //second student info
+        // second student info using elements of array
         student2.setEmail(details2[1]);
         student2.setCourse(details2[2]);
-        //print students
+        // print students
         System.out.println("\n" + student.getName() + " " + student.getEmail() + " " + student.getCourse());
         System.out.println("\n" + student2.getName() + " " + student2.getEmail() + " " + student2.getCourse());
         System.out.println("\n" + student3.getName() + " " + student3.getEmail() + " " + student3.getCourse());
