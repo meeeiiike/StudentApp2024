@@ -1,7 +1,7 @@
 package ie.atu.week4;
 
 import java.util.Scanner;
-
+//GOGORGWKOEBGIEGIEHR
 public class StudentApp {
     public static void main(String[] args) {
 
