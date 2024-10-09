@@ -21,10 +21,8 @@ public class StudentApp {
         student2.setEmail(details2[1]);
         student2.setCourse(details2[2]);
         // print students
-        System.out.println("\n" + student.getName() + " " + student.getEmail() + " " + student.getCourse());
-        System.out.println("\n" + student2.getName() + " " + student2.getEmail() + " " + student2.getCourse());
-        System.out.println("\n" + student3.getName() + " " + student3.getEmail() + " " + student3.getCourse());
-        System.out.println("\n\n");
+        System.out.println("\n" + student.toString() + "\n" + student2.toString() + "\n" + student3.toString());
+        System.out.println("\n");
     }
 
     public static String[] getAllDetails(){
