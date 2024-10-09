@@ -18,13 +18,8 @@ public class StudentApp {
         student.setEmail(details1[1]);
         student.setCourse(details1[2]);
         // second student info using elements of array
-        student2.setName(details2[0]);
         student2.setEmail(details2[1]);
         student2.setCourse(details2[2]);
-        // third student info using elements of array
-        student3.setName(details3[0]);
-        student3.setEmail(details3[1]);
-        student3.setCourse(details3[2]);
         // print students
         System.out.println("\nStudent 1: " + student + "\nStudent 2: " + student2 + "\nStudent 3: " + student3);
         System.out.println("\n");
