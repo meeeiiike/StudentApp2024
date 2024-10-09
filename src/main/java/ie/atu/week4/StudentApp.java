@@ -8,7 +8,7 @@ public class StudentApp {
         String[] details2 = getAllDetails();
         String[] details3 = getAllDetails();
 
-        // creating 3 students
+        // creating 3 students, NOW STEPS INTO THE PROPER CONSTRUCTORS
         Student student = new Student();
         Student student2 = new Student(details2[0]);
         Student student3 = new Student(details3[0], details3[1], details3[2]);
