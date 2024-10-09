@@ -21,7 +21,7 @@ public class StudentApp {
         student2.setEmail(details2[1]);
         student2.setCourse(details2[2]);
         // print students
-        System.out.println("\n" + student.toString() + "\n" + student2.toString() + "\n" + student3.toString());
+        System.out.println("\n" + student + "\n" + student2 + "\n" + student3);
         System.out.println("\n");
     }
 
