@@ -1,5 +1,6 @@
 package ie.atu.week4;
 import java.util.Scanner;
+
 public class StudentApp {
     public static void main(String[] args) {
 
@@ -17,14 +18,18 @@ public class StudentApp {
         student.setName(details1[0]);
         student.setEmail(details1[1]);
         student.setCourse(details1[2]);
-        // second student info using elements of array
+
+        // set email and course for student 2
         student2.setEmail(details2[1]);
         student2.setCourse(details2[2]);
-        // print students
-        System.out.println("\nStudent 1: " + student + "\nStudent 2: " + student2 + "\nStudent 3: " + student3);
-        System.out.println("\n");
+
+        // print students details
+        System.out.println("Student 1: Name = " + student.getName() + ", Email = " + student.getEmail() + ", Course = " + student.getCourse());
+        System.out.println("Student 2: Name = " + student2.getName() + ", Email = " + student2.getEmail() + ", Course = " + student2.getCourse());
+        System.out.println("Student 3: Name = " + student3.getName() + ", Email = " + student3.getEmail() + ", Course = " + student3.getCourse());
     }
 
+    // method to take in all student details and store in array
     public static String[] getAllDetails(){
         Scanner sc = new Scanner(System.in);
         String[] details = new String[3];
