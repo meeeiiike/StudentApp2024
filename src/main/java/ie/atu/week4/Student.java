@@ -49,7 +49,7 @@ public class Student {
 
     /**
      *
-     * @return returns nothing as names are printed using getter methods
+     * @return returns nothing as names are printed using getter methods '-'
      */
     @Override
     public String toString() {
