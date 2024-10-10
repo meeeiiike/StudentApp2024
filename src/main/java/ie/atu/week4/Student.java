@@ -47,10 +47,15 @@ public class Student {
         this.course = course;
     }
 
+    /**
+     *
+     * @return returns nothing as names are printed using getter methods '-'
+     */
     @Override
     public String toString() {
-        return "Name='" + name + '\'' +
-                ", Email='" + email + '\'' +
-                ", Course='" + course + '\'';
+        return "Student: " +
+                "Name = '" + name + '\'' +
+                ", Email = '" + email + '\'' +
+                ", Course = '" + course;
     }
 }
