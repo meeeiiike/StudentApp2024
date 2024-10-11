@@ -16,9 +16,6 @@ public class StudentApp {
             System.out.println("Enter student " + (n + 1) + " details: ");
             String[] details = getAllDetails();
             students[n] = new Student(details[0], details[1], details[2]);
-           // students[n].setName(details[0]);
-           // students[n].setEmail(details[1]);
-           // students[n].setCourse(details[2]);
         }
 
         // Print details for num of students
