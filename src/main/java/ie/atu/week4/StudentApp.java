@@ -22,10 +22,8 @@ public class StudentApp {
         student2.setEmail(details2[1]);
         student2.setCourse(details2[2]);
 
-        // Print students details using getter methods
-        System.out.println("Student 1: Name = " + student.getName() + ", Email = " + student.getEmail() + ", Course = " + student.getCourse());
-        System.out.println("Student 2: Name = " + student2.getName() + ", Email = " + student2.getEmail() + ", Course = " + student2.getCourse());
-        System.out.println("Student 3: Name = " + student3.getName() + ", Email = " + student3.getEmail() + ", Course = " + student3.getCourse());
+        // Call method to print students details using getter methods
+        printInfo(student, student2, student3);
     }
 
     // Method to take in student details and store in arrays
@@ -39,5 +37,11 @@ public class StudentApp {
         System.out.println("Enter the course of the student");
         details[2] = sc.nextLine();
         return details;
+    }
+
+    public static void printInfo(Student student, Student student2, Student student3) {
+        System.out.println("Student 1: Name = " + student.getName() + ", Email = " + student.getEmail() + ", Course = " + student.getCourse());
+        System.out.println("Student 2: Name = " + student2.getName() + ", Email = " + student2.getEmail() + ", Course = " + student2.getCourse());
+        System.out.println("Student 3: Name = " + student3.getName() + ", Email = " + student3.getEmail() + ", Course = " + student3.getCourse());
     }
 }
