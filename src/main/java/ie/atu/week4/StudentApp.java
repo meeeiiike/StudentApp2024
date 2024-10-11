@@ -1,47 +1,39 @@
 package ie.atu.week4;
+
 import java.util.Scanner;
 
 public class StudentApp {
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
 
-        // Prompt user for 3 students info
-        String[] details1 = getAllDetails();
-        String[] details2 = getAllDetails();
-        String[] details3 = getAllDetails();
+        // Prompt user for number of students to add
+        System.out.println("How many students do you want to enroll?");
+        int numOfStudents = sc.nextInt();
+        Student[] students = new Student[numOfStudents];
 
-        // Creating 3 students, while only initializing info for stu2 and stu3
-        Student student = new Student();
-        Student student2 = new Student(details2[0]);
-        Student student3 = new Student(details3[0], details3[1], details3[2]);
+        // Get details of each student, store new student in array and set details in separate array
+        for (int n = 0; n < numOfStudents; n++) {
+            System.out.println("Enter student " + (n + 1) + " details: ");
+            String[] details = getAllDetails();
+            students[n] = new Student(details[0], details[1], details[2]);
+        }
 
-        // Setting first student info using elements of array
-        student.setName(details1[0]);
-        student.setEmail(details1[1]);
-        student.setCourse(details1[2]);
-        // Setting email and course for student 2
-        student2.setEmail(details2[1]);
-        student2.setCourse(details2[2]);
-
-        // Call method to print students details using getter methods
-        printInfo(student, student2, student3);
+        // Print details for num of students
+        for (int n = 0; n < numOfStudents; n++) {
+              System.out.println(students[n]);
+        }
     }
 
-    // Method to take in student details and store in arrays
+    // Method to take in student details and store in array elements
     public static String[] getAllDetails(){
         Scanner sc = new Scanner(System.in);
         String[] details = new String[3];
-        System.out.println("Enter the name of the student");
+        System.out.println("Enter the name of the student ");
         details[0] = sc.nextLine();
         System.out.println("Enter the email of the student");
         details[1] = sc.nextLine();
         System.out.println("Enter the course of the student");
         details[2] = sc.nextLine();
         return details;
-    }
-
-    public static void printInfo(Student student, Student student2, Student student3) {
-        System.out.println("Student 1: Name = " + student.getName() + ", Email = " + student.getEmail() + ", Course = " + student.getCourse());
-        System.out.println("Student 2: Name = " + student2.getName() + ", Email = " + student2.getEmail() + ", Course = " + student2.getCourse());
-        System.out.println("Student 3: Name = " + student3.getName() + ", Email = " + student3.getEmail() + ", Course = " + student3.getCourse());
     }
 }
