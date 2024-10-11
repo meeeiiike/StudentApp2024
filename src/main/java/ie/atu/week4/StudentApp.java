@@ -20,7 +20,7 @@ public class StudentApp {
 
         // Print details for num of students
         for (int n = 0; n < numOfStudents; n++) {
-              System.out.println(students[n]);
+              System.out.println("Student " + (n + 1) + " " + students[n]);
         }
     }
 
