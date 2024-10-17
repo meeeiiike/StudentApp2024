@@ -21,7 +21,6 @@ public class StudentApp {
         // Setting email and course for student 2
         student2.setEmail(stu2Details[1]);
         student2.setCourse(stu2Details[2]);
-
         // Call method to print students details using getter methods
         printInfo(student, student2, student3);
     }
