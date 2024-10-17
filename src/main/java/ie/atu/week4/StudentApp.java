@@ -5,22 +5,22 @@ public class StudentApp {
     public static void main(String[] args) {
 
         // Prompt user for 3 students info
-        String[] stu1 = getAllDetails();
-        String[] stu2 = getAllDetails();
-        String[] stu3 = getAllDetails();
+        String[] stu1Details = getAllDetails();
+        String[] stu2Details = getAllDetails();
+        String[] stu3Details = getAllDetails();
 
         // Creating 3 students, while only initializing info for stu2 and stu3
         Student student = new Student();
-        Student student2 = new Student(stu2[0]);
-        Student student3 = new Student(stu3[0], stu3[1], stu3[2]);
+        Student student2 = new Student(stu2Details[0]);
+        Student student3 = new Student(stu3Details[0], stu3Details[1], stu3Details[2]);
 
         // Setting first student info using elements of array
-        student.setName(stu1[0]);
-        student.setEmail(stu1[1]);
-        student.setCourse(stu1[2]);
+        student.setName(stu1Details[0]);
+        student.setEmail(stu1Details[1]);
+        student.setCourse(stu1Details[2]);
         // Setting email and course for student 2
-        student2.setEmail(stu2[1]);
-        student2.setCourse(stu2[2]);
+        student2.setEmail(stu2Details[1]);
+        student2.setCourse(stu2Details[2]);
 
         // Call method to print students details using getter methods
         printInfo(student, student2, student3);
